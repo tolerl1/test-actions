@@ -7,9 +7,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v4
-        
-        - uses: ./.github/actions/build-action
+        - name: checkout
+          uses: actions/checkout@v4
+        - name: call build action
+          uses: ./.github/actions/build-action
 
   job2:
     runs-on: ubuntu-latest
