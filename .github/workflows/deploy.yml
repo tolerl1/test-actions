@@ -9,7 +9,7 @@ jobs:
     steps:
         - uses: actions/checkout@v4
 
-        - uses: ./.github/actions/build-action
+        - uses: .github/actions/build-action
 
   job2:
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
     steps:
         - uses: actions/checkout@v4
 
-        - uses: ./.github/actions/import-action
+        - uses: .github/actions/import-action
 
   job4:
     runs-on: ubuntu-latest
