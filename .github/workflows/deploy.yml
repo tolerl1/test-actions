@@ -2,6 +2,10 @@ name: Call a reusable workflow and use its outputs
 
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        required: false
 
 jobs:
   job1:
