@@ -24,3 +24,9 @@ jobs:
         run: echo "firstword=hello" >> $GITHUB_OUTPUT
       - id: step2
         run: echo "secondword=world" >> $GITHUB_OUTPUT
+      - run: mkdir -p path/to/artifact
+      - run: echo hello > path/to/artifact/word.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifact1234
+          path: path/to/artifact/word.txt
